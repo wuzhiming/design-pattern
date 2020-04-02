@@ -3,8 +3,9 @@
 `策略模式定义了算法簇，分别封装起来，让它们之间可以相互替换，此模式让算法的变化独立于使用算法的客户`
 
 ## 介绍
-- 本例中把 `fly` `quack` 分别封装成接口，并设置抽象类 `duck`，所有的鸭子都有 `fly`、`quack` 的特征，在定义 `MallardDuck` `RedHeadDuck`类
-的时候确定所需要的`fly`、`quack`的具体实例
+- 本例中把 `fly` `quack` 分别封装成接口，并设置抽象类 `duck`，
+所有的鸭子都有 `fly`、`quack` 的特征，
+在定义 `MallardDuck` `RedHeadDuck`类的时候确定所需要的`fly`、`quack`的具体实例
 
 ### 策略模式的优点
 - 让子类或者运行时去决定具体行为，比如本例子中，我们使用`Duck`抽象类来实例化`RedHeadDuck`和`MallardDuck`，

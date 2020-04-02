@@ -43,23 +43,23 @@ abstract class Duck {
     flyBehavior: FlyBehavior;
     quackBehavior: QuackBehavior;
 
-    public display() {
+    public display(): void {
         console.log('I am a model duck~~');
     }
 
-    public performFly() {
+    public performFly(): void {
         this.flyBehavior.fly();
     }
 
-    public performQuack() {
+    public performQuack(): void {
         this.quackBehavior.quack();
     }
 
-    setFlyBehavior(bef: FlyBehavior) {
+    setFlyBehavior(bef: FlyBehavior):void {
         this.flyBehavior = bef;
     }
 
-    setQuackBehavior(quack: QuackBehavior) {
+    setQuackBehavior(quack: QuackBehavior):void {
         this.quackBehavior = quack;
     }
 
@@ -105,11 +105,12 @@ class FlyWithRocket implements FlyBehavior {
     }
 }
 
-class NewQuack implements QuackBehavior{
+class NewQuack implements QuackBehavior {
     quack() {
         console.log('quack with speaker');
     }
 }
+
 class NewDuck extends Duck {
     constructor() {
         super();
@@ -143,7 +144,7 @@ function main() {
 
 
     //新鸭子
-    let newDuck:Duck = new NewDuck();
+    let newDuck: Duck = new NewDuck();
     newDuck.display();
     newDuck.performFly();
     newDuck.performQuack();
