@@ -58,6 +58,8 @@ class LightOffCommand implements Command {
 class RemoteControl {
     onCommand: Command[] = [];
     offCommand: Command[] = [];
+
+    //使用命令很容易实现撤销，如果需要撤销多个步骤，只需要把撤销步骤变成一个队列即可
     curCommand: Command;
 
     /*constructor() {
